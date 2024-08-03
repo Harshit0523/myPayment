@@ -1,16 +1,15 @@
-const express = require("express")
-const app = express()
-const cors = require("cors")
+const express = require("express");
+const cors = require("cors");
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-const mainRouter = require("./routes/index")
+const mainRouter = require("./routes/index");
 
-
+const app = express();
 //all request coming here , go mainRouter there
-app.use("/api/v1",mainRouter)
+app.use("/api/v1", mainRouter);
 
-app.listen(3000,()=>{
-    console.log("i m listening")
+app.listen(3000, () => {
+  console.log("i m listening");
 });
