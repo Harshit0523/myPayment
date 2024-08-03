@@ -1,5 +1,6 @@
 const {JWT_SECRET} = require("./config")
 const jwt = require("jsonwebtoken")
+console.log("added")
 
 const authMiddleware =(req,res,next)=>{
     const authHeader = req.body.authorization;
